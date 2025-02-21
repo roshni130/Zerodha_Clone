@@ -17,7 +17,7 @@ function Signup() {
         localStorage.setItem('token', res.data.token);
         axios.defaults.headers.common['Authorization'] = `Bearer ${res.data.token}`;
         alert(`${isLogin ? 'Login' : 'Signup'} successful`);
-        setTimeout(() => window.location.href = 'https://zerodha-clone1.onrender.com', 500);
+        setTimeout(() => window.location.href = 'https://zerodha-clone1.onrender.com', 500); 
       } else {
         alert(`${isLogin ? 'Login' : 'Signup'} failed. ${res.data.message || 'No token received.'}`);
       }
