@@ -10,14 +10,14 @@ function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const url = isLogin ? 'http://localhost:3002/login' : 'http://localhost:3002/signup';
+    const url = isLogin ? 'https://zerodha-clone2.onrender.com' : 'https://zerodha-clone2.onrender.com';
     try {
       const res = await axios.post(url, formData);
       if (res.data.token) {
         localStorage.setItem('token', res.data.token);
         axios.defaults.headers.common['Authorization'] = `Bearer ${res.data.token}`;
         alert(`${isLogin ? 'Login' : 'Signup'} successful`);
-        setTimeout(() => window.location.href = 'http://localhost:3001', 500);
+        setTimeout(() => window.location.href = 'https://zerodha-clone1.onrender.com', 500);
       } else {
         alert(`${isLogin ? 'Login' : 'Signup'} failed. ${res.data.message || 'No token received.'}`);
       }
