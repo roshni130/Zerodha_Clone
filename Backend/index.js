@@ -18,7 +18,7 @@ const uri=process.env.MONGO_URL;
 
 const app=express();
 
-app.use(cors({origin:"https://zerodha-clone-co7p.onrender.com",credentials:true}));
+app.use(cors({origin:["https://zerodha-clone-co7p.onrender.com","https://zerodha-clone2.onrender.com"],credentials:true}));
 app.use(bodyParser.json());
 
 
