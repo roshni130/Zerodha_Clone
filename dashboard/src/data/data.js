@@ -55,7 +55,7 @@ export const watchlist = [
     },
   ];
   
-  // holdings
+  
   export const holdings = [
     {
       name: "BHARTIARTL",
