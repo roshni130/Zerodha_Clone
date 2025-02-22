@@ -10,7 +10,7 @@ function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const url = isLogin ? 'https://zerodha-clone2.onrender.com' : 'https://zerodha-clone2.onrender.com';
+    const url = isLogin ? 'https://zerodha-clone2.onrender.com/login' : 'https://zerodha-clone2.onrender.com/signup';
     try {
       const res = await axios.post(url, formData);
       if (res.data.token) {
